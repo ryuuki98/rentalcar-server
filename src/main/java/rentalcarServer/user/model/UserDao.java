@@ -9,19 +9,18 @@ import java.util.List;
 import rentalcarServer.DBManager;
 
 public class UserDao {
-	Connection conn;
-	PreparedStatement pstmt;
-	ResultSet rs;
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
 
 	private UserDao() {
 	}
 
-	UserDao userDao = new UserDao();
+	private static UserDao userDao = new UserDao();
 
-	public UserDao getInstance() {
+	public static UserDao getInstance() {
 		return userDao;
 	}
 
-	
 
 }
