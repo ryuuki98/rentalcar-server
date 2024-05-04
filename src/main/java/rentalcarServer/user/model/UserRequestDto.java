@@ -23,6 +23,16 @@ public class UserRequestDto {
 			this.userPhone = userPhone;
 			this.admin = admin;
 		}
+		public UserRequestDto(String userId, String userPassword, String userName, String userBirth, String userTelecom,
+				String userPhone) {
+			super();
+			this.userId = userId;
+			this.userPassword = userPassword;
+			this.userName = userName;
+			this.userBirth = userBirth;
+			this.userTelecom = userTelecom;
+			this.userPhone = userPhone;
+		}
 
 		public String getUserId() {
 			return userId;
