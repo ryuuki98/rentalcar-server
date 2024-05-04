@@ -13,6 +13,7 @@ public class User {
     private boolean admin;
     private Timestamp regDate;
     private Timestamp modDate;
+    
 	public User(String userId, String userPassword, String userName, String userBirth, String userTelecom,
 			String userPhone, boolean admin, Timestamp regDate, Timestamp modDate) {
 		super();
@@ -53,8 +54,4 @@ public class User {
 	public Timestamp getModDate() {
 		return modDate;
 	}
-	
-
-    // 생성자, Getter 및 Setter 메서드는 생략하겠습니다.
-    // 필요하다면 추가해주세요.
 }
