@@ -1,3 +1,6 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="rentalcarSercer.DBManager"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,10 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>hello world</h1>
+	<%Connection conn = DBManager.getConnection();%>
 
-	<p>git connect success</p>
-	<span>ddd</span>
-	
 </body>
 </html>

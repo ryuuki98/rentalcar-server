@@ -14,11 +14,11 @@ public class DBManager {
 		
 		try {
 			Context init = new InitialContext();
-			DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/BoardServerDB");
+			DataSource ds = (DataSource) init.lookup("java:comp/env/jdbc/RentalcarServerDB");
 			
 			conn = ds.getConnection();
 			
-			System.out.println("db연동 성공");
+			System.out.println("db연동 성공---");
 			return conn;
 		} catch (Exception e) {
 			System.out.println("db연동 실패");
