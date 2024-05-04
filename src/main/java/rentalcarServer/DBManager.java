@@ -1,4 +1,4 @@
-package rentalcarSercer;
+package rentalcarServer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
