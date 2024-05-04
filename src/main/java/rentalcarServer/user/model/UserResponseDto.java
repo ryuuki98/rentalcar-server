@@ -21,6 +21,8 @@ public class UserResponseDto {
 		this.userPhone = userPhone;
 		this.admin = admin;
 	}
+	
+	
 
 	public String getUserId() {
 		return userId;
