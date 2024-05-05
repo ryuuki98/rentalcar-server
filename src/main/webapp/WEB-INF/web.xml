@@ -12,7 +12,19 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
+	<!-- servlet file mapping -->
+	
+	<servlet>
+	<servlet-name>joinFormAction</servlet-name>
+	<servlet-class>rentalcarServer.user.controller.JoinFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>joinFormAction</servlet-name>
+	<url-pattern>/joinFormAction</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- jsp file mapping -->
 	<servlet>
 		<servlet-name>joinForm</servlet-name>
 		<jsp-file>/views/user/joinForm.jsp</jsp-file>
