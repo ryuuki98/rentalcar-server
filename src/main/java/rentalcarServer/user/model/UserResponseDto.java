@@ -80,4 +80,9 @@ public class UserResponseDto {
 		this.admin = admin;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("%s/%s",this.userId,this.userName);
+	}
 }
