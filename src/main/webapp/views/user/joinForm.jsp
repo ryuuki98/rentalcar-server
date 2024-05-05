@@ -16,6 +16,7 @@
 			</div>
 			<div class="error-container">
 				<p class="error-msg" id="error-msg-id">* 아이디: 필수 정보입니다.</p>
+				<p class="error-msg" id="error-msg-id-dupl">아이디: 중복된 아이디입니다.</p>
 				<p class="error-msg" id="error-msg-password">* 비밀번호: 필수 정보입니다.</p>
 			</div>
 			<div>
@@ -43,6 +44,9 @@
 		</form>
 	</section>
 	<script src="/resources/script/validation-join.js"></script>
+	<script src="/resources/script/validation-id.js"></script>
+	
+	
 	
 </body>
 <jsp:include page="/footer"></jsp:include>

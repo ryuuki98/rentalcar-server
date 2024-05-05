@@ -23,6 +23,7 @@ public class UserResponseDto {
 	}
 	
 	
+	
 
 	public String getUserId() {
 		return userId;

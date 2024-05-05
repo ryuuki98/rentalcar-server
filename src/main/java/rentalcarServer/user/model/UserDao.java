@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,4 +82,79 @@ public class UserDao {
 		}
 		return null;
 	}
+
+	public boolean userExists(String id) {
+        return findUserById(id) != null;
+    }
+	
+public List<UserResponseDto> findUserAll() {
+        List<UserResponseDto> list = new ArrayList<UserResponseDto>();
+
+        try {
+            conn = DBManager.getConnection();
+
+            // 쿼리할 준비
+            String sql = "SELECT user_id,user_password,user_name,user_birth,user_telecom,user_phone,admin FROM users";
+            pstmt = conn.prepareStatement(sql);
+
+            // 쿼리 실행
+            rs = pstmt.executeQuery();
+
+            // 튜플 읽기
+            while (rs.next()) {
+                // database의 column index는 1부터 시작!
+                String id = rs.getString(1);
+                String password = rs.getString(2);
+                String name = rs.getString(3);
+                String birth = rs.getString(4);
+                String telecom = rs.getString(5);
+                String phone = rs.getString(6);
+                boolean admin = rs.getBoolean(7);
+
+                UserResponseDto user = new UserResponseDto(id,password,name,birth,telecom,phone,admin);
+                list.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+	
+	private User findUserById(String id) {
+        User user = null;
+
+        try {
+            conn = DBManager.getConnection();
+
+            String sql = "SELECT * FROM users WHERE user_id=?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, id);
+
+            rs = pstmt.executeQuery();
+
+            
+            /*String userId, String userPassword, String userName, String userBirth, String userTelecom,
+			String userPhone, boolean admin, Timestamp regDate, Timestamp modDate
+             * 
+             */
+            if(rs.next()) {
+                String userPassword = rs.getString(2);
+                String userName = rs.getString(3);
+                String userBirth= rs.getString(4);
+                String userTelecom = rs.getString(5);
+                String userPhone = rs.getString(6);
+                boolean admin = rs.getBoolean(7);
+                Timestamp regDate = rs.getTimestamp(8);
+                Timestamp modDate = rs.getTimestamp(9);
+
+                user = new User(id,userPassword,userName,userBirth,userTelecom,userPhone, admin, regDate, modDate);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBManager.close(conn, pstmt, rs);
+        }
+        return user;
+    }
 }

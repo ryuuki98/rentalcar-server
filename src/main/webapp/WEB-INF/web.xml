@@ -32,6 +32,15 @@
 	<url-pattern>/loginFormAction</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+	<servlet-name>findUserAction</servlet-name>
+	<servlet-class>rentalcarServer.user.controller.FindUserAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>findUserAction</servlet-name>
+	<url-pattern>/findUserAction</url-pattern>
+	</servlet-mapping>
+	
 	
 	<!-- jsp file mapping -->
 	<servlet>
