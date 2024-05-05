@@ -21,7 +21,6 @@
         userDto.setUserBirth("20001102");
         userDto.setUserTelecom("skt");
         userDto.setUserPhone("01012311231");
-        userDto.setAdmin(false);
         instance.createUser(userDto);
     %>
 
