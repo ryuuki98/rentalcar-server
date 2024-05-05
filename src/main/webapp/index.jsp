@@ -12,17 +12,5 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-        UserDao instance = UserDao.getInstance();
-        UserRequestDto userDto = new UserRequestDto();
-        userDto.setUserId("fdsq");
-        userDto.setUserPassword("fdsfs");
-        userDto.setUserName("fds");
-        userDto.setUserBirth("20001102");
-        userDto.setUserTelecom("skt");
-        userDto.setUserPhone("01012311231");
-        instance.createUser(userDto);
-    %>
-
 </body>
 </html>

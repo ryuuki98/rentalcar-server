@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/resources/style/joinForm.css">
+<link rel="stylesheet" href="/resources/style/form.css">
 </head>
 <jsp:include page="/header"></jsp:include>
 <body>
