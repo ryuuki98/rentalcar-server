@@ -59,6 +59,16 @@
 		<servlet-name>logoutAction</servlet-name>
 		<url-pattern>/logoutAction</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>deleteFormAction</servlet-name>
+		<servlet-class>rentalcarServer.user.controller.DeleteFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteFormAction</servlet-name>
+		<url-pattern>/deleteFormAction</url-pattern>
+	</servlet-mapping>
+	
 
 
 
@@ -123,6 +133,16 @@
 	<servlet-mapping>
 		<servlet-name>mypage</servlet-name>
 		<url-pattern>/mypage</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>deleteForm</servlet-name>
+		<jsp-file>/views/user/deleteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteForm</servlet-name>
+		<url-pattern>/deleteForm</url-pattern>
 	</servlet-mapping>
 
 

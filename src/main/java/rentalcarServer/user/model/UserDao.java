@@ -194,4 +194,25 @@ public class UserDao {
 		}
 		return user;
 	}
+
+	public boolean deleteUser(UserRequestDto userDto) {
+		conn = DBManager.getConnection();
+
+		String sql = "DELETE FROM users WHERE user_id = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userDto.getUserId());
+
+			pstmt.execute();
+
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
+		}
+
+		return false;
+	}
 }

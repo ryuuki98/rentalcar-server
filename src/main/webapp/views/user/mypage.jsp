@@ -17,7 +17,7 @@
 
 		<br>
 		<button onclick="location.href = '/updateForm'">정보 변경</button>
-		<button onclick="location.href='/deleteUserForm'">유저 탈퇴</button>
+		<button onclick="location.href='/deleteForm'">유저 탈퇴</button>
 	</section>
 </body>
 <jsp:include page="/footer"></jsp:include>
