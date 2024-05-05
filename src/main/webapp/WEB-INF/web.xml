@@ -42,6 +42,17 @@
 	</servlet-mapping>
 	
 	
+	<servlet>
+	<servlet-name>updateFormAction</servlet-name>
+	<servlet-class>rentalcarServer.user.controller.UpdateFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>updateFormAction</servlet-name>
+	<url-pattern>/updateFormAction</url-pattern>
+	</servlet-mapping>
+	
+	
+	
 	<!-- jsp file mapping -->
 	<servlet>
 		<servlet-name>joinForm</servlet-name>
@@ -63,6 +74,18 @@
 		<servlet-name>loginForm</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateForm</servlet-name>
+		<jsp-file>/views/user/updateForm.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateForm</servlet-name>
+		<url-pattern>/updateForm</url-pattern>
+	</servlet-mapping>
+	
+	
 
 	<servlet>
 		<servlet-name>header</servlet-name>
@@ -81,6 +104,16 @@
 		<servlet-name>footer</servlet-name>
 		<url-pattern>/footer</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>mypage</servlet-name>
+		<jsp-file>/views/user/mypage.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mypage</servlet-name>
+		<url-pattern>/mypage</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 

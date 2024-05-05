@@ -22,6 +22,16 @@ public class UserResponseDto {
 		this.admin = admin;
 	}
 	
+	public UserResponseDto(User user) {
+		super();
+		this.userId =user.getUserId();
+		this.userPassword =user.getUserPassword();
+		this.userName = user.getUserName();
+		this.userBirth = user.getUserBirth();
+		this.userTelecom = user.getUserTelecom();
+		this.userPhone = user.getUserPhone();
+	}
+	
 	
 	
 
