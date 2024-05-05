@@ -23,9 +23,9 @@
 					type="text" id="birth" name="birth" placeholder="생년월일 8자리">
 				<select id="telecom" name="telecom">
 					<option selected disabled>통신사 선택</option>
-					<option value="SKT">SKT</option>
-					<option value="KT">KT</option>
-					<option value="LG">LGU+</option>
+					<option value="skt">SKT</option>
+					<option value="kt">KT</option>
+					<option value="lg">LGU+</option>
 				</select> <input type="text" id="phone" name="phone" placeholder="휴대전화번호">
 			</div>
 			<div class="error-container">
