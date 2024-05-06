@@ -8,7 +8,7 @@
 <jsp:include page="/header"></jsp:include>
 <body>
 	<section id="root">
-		<h2>정보수정</h2>
+		<h2>회원정보 수정</h2>
 		<form method="POST" action="/updateFormAction">
 			<div>
 				<input type="text" id="id" name="id" placeholder="아이디" value="${user.userId}" readonly="readonly"> 
@@ -42,7 +42,7 @@
 				<p class="error-msg" id="error-msg-phone-pattern">* 휴대전화번호:
 					휴대전화번호는 하이픈 없이 11자리로 입력 해주십시요.</p>
 			</div>
-			<input type="submit" value="회원가입">
+			<input type="submit" value="수정">
 		</form>
 	</section>
 	<script src="/resources/script/validation-join.js"></script>
