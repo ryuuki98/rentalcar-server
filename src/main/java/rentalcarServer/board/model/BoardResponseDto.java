@@ -1,11 +1,14 @@
 package rentalcarServer.board.model;
 
+import java.sql.Timestamp;
+
 public class BoardResponseDto {
 	private int boardCode;
     private String userId;
     private String title;
     private String content;
     private boolean admin;
+    private Timestamp regDate;
 	public BoardResponseDto(int boardCode, String userId, String title, String content, boolean admin) {
 		super();
 		this.boardCode = boardCode;
@@ -13,6 +16,16 @@ public class BoardResponseDto {
 		this.title = title;
 		this.content = content;
 		this.admin = admin;
+	}
+	
+	public BoardResponseDto(int boardCode, String userId, String title, String content, boolean admin,Timestamp regDate) {
+		super();
+		this.boardCode = boardCode;
+		this.userId = userId;
+		this.title = title;
+		this.content = content;
+		this.admin = admin;
+		this.regDate = regDate;
 	}
 	public int getBoardCode() {
 		return boardCode;
@@ -43,6 +56,19 @@ public class BoardResponseDto {
 	}
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
+	}
+
+	public Timestamp getRegDate() {
+		return regDate;
+	}
+
+	public void setRegDate(Timestamp regDate) {
+		this.regDate = regDate;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("[%d] %s : %s", boardCode,title,content);
 	}
 	
 	

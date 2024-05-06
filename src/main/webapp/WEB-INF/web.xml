@@ -69,6 +69,15 @@
 		<url-pattern>/deleteFormAction</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>boardAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.BoardAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardAction</servlet-name>
+		<url-pattern>/boardAction</url-pattern>
+	</servlet-mapping>
+	
 
 
 
@@ -143,6 +152,15 @@
 	<servlet-mapping>
 		<servlet-name>deleteForm</servlet-name>
 		<url-pattern>/deleteForm</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>board</servlet-name>
+		<jsp-file>/views/board/board.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>board</servlet-name>
+		<url-pattern>/board</url-pattern>
 	</servlet-mapping>
 
 
