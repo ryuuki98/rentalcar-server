@@ -78,6 +78,32 @@
 		<url-pattern>/boardAction</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>detail</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.Detail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>detail</servlet-name>
+		<url-pattern>/detail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>deleteBoardAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.DeleteBoardAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteBoardAction</servlet-name>
+		<url-pattern>/deleteBoardAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>writeBoardAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.WriteBoardAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>writeBoardAction</servlet-name>
+		<url-pattern>/writeBoardAction</url-pattern>
+	</servlet-mapping>
 
 
 
@@ -161,6 +187,24 @@
 	<servlet-mapping>
 		<servlet-name>board</servlet-name>
 		<url-pattern>/board</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>showBoard</servlet-name>
+		<jsp-file>/views/board/showBoard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showBoard</servlet-name>
+		<url-pattern>/showBoard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>writeBoard</servlet-name>
+		<jsp-file>/views/board/writeBoard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>writeBoard</servlet-name>
+		<url-pattern>/writeBoard</url-pattern>
 	</servlet-mapping>
 
 

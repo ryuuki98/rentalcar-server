@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		th, td {
+			text-align: left;
+			padding: 8px;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		
+		/* 버튼 스타일 */
+		.btn-write {
+			display: inline-block;
+			background-color: #007bff;
+			color: white;
+			padding: 8px 16px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		.btn-write:hover {
+			background-color: #0056b3;
+		}
+
+		/* 게시판 페이지 제목과 버튼을 감싸는 div 스타일 */
+		.page-header {
+			overflow: hidden;
+			padding-bottom: 10px;
+			margin-bottom: 20px; /* 버튼과 헤더 사이의 간격을 조절하기 위해 추가 */
+		}

@@ -86,7 +86,7 @@ public class BoardDao {
 	    return board;
 	}
 
-	private BoardResponseDto findBoard(int boardId) {
+	public BoardResponseDto findBoard(int boardId) {
 		conn = DBManager.getConnection();
 		BoardResponseDto board = null;
 		String sql = "SELECT board_code,user_id,title,content,admin FROM board WHERE board_code = ?";
@@ -110,6 +110,26 @@ public class BoardDao {
 		
 		
 		return board;
+	}
+	
+	public boolean deleteBoard(BoardRequestDto boardRequestDto) {
+		if (findBoard(boardRequestDto.getBoardCode()) == null) {
+			return false;
+		}
+
+		try {
+			String sql = "DELETE FROM board WHERE board_code=?";
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, boardRequestDto.getBoardCode());
+			
+			pstmt.execute();
+
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 }
