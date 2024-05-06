@@ -1,14 +1,5 @@
 $(document).ready(() => {
 
-	$('#id').focusout(e => {
-		if ($('#id').val() === "") {
-			$('#error-msg-id').show();
-			$('#id').css('border', 'solid 1px tomato');
-		} else {
-			$('#error-msg-id').hide();
-			$('#id').css('border', 'solid 1px lightgrey');
-		}
-	});
 
 	$('#password').focusout(e => {
 		if ($('#password').val() === "") {
@@ -23,18 +14,11 @@ $(document).ready(() => {
 	$('form').submit(e => {
 		e.preventDefault();
 
-		const id = $('#id').val();
 		const password = $('#password').val();
 
 		// 유효성 검사 
 		let isValid = true;
 
-
-		if (id === "") {
-			isValid = false;
-			$('#error-msg-id').show();
-			$('#id').css('border', 'solid 1px tomato');
-		}
 
 		if (password === "") {
 			isValid = false;

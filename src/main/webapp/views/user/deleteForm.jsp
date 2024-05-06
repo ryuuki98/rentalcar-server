@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/resources/style/form.css">
 </head>
 <c:import url="/header"/>
-<script src="/resources/script/validation-login.js"></script>
+<script src="/resources/script/validation-delete.js"></script>
 <body>
 	<section id="root">
 		<h2>회원탈퇴</h2>
