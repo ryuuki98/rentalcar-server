@@ -14,7 +14,7 @@
         <div class="logo">렌트다 렌트 엌ㅋㅋ</div> 
         <nav>
             <a href="/car-rental">차량대여</a> 
-            <a href="/board">게시판</a> 
+            <a href="/boardAction">게시판</a> 
             <a href="/notice">공지사항</a> 
             <c:choose>
                 <c:when test="${not empty user}">

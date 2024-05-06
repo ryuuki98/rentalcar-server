@@ -1,3 +1,7 @@
+<%@page import="rentalcarServer.board.model.BoardRequestDto"%>
+<%@page import="rentalcarServer.board.model.BoardResponseDto"%>
+<%@page import="java.util.List"%>
+<%@page import="rentalcarServer.board.model.BoardDao"%>
 <%@page import="rentalcarServer.user.model.UserRequestDto"%>
 <%@page import="rentalcarServer.user.model.UserDao"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -12,5 +16,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+BoardDao boardDao = BoardDao.getInstance();
+
+BoardRequestDto boardRequestDto = new BoardRequestDto();
+boardRequestDto.setUserId("aaaa");
+boardRequestDto.setTitle("들어가져라 얍");
+boardRequestDto.setContent("들어가졌구연 wwww");
+
+boardDao.createBoard(boardRequestDto);
+
+
+List<BoardResponseDto> list = boardDao.findBoardAll();
+
+for(int i = 0 ; i < list.size(); i++){
+	System.out.println(list.get(i));
+}
+%>
 </body>
 </html>
