@@ -104,6 +104,15 @@
 		<servlet-name>writeBoardAction</servlet-name>
 		<url-pattern>/writeBoardAction</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>moveUpdateFormAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.MoveUpdateFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moveUpdateFormAction</servlet-name>
+		<url-pattern>/moveUpdateFormAction</url-pattern>
+	</servlet-mapping>
 
 
 
@@ -205,6 +214,15 @@
 	<servlet-mapping>
 		<servlet-name>writeBoard</servlet-name>
 		<url-pattern>/writeBoard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateBoard</servlet-name>
+		<jsp-file>/views/board/updateBoard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateBoard</servlet-name>
+		<url-pattern>/updateBoard</url-pattern>
 	</servlet-mapping>
 
 

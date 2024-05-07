@@ -17,7 +17,7 @@
         <div class="content">
             <h1>${board.title}</h1>
             <p>${board.content}</p>
-               <form action="/updateBoard" method="post">
+               <form action="/moveUpdateFormAction" method="post">
                 <input type="hidden" name="boardCode" value="${board.boardCode}">
                 <button type="submit">수정</button>
             </form>
