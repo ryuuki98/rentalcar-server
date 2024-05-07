@@ -5,6 +5,7 @@ header {
     grid-template-columns: 1fr auto 1fr; /* 세 개의 열을 동일한 너비로 설정 */
     align-items: center;
     justify-items: center;
+    height : 50px;
     margin-top: 50px;
     margin-bottom: 30px
 }

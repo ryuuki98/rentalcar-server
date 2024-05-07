@@ -52,7 +52,7 @@
 
         <label for="content">내용</label>
         <textarea id="content" name="content" rows="8"></textarea>
-
+        
         <input type="submit" value="작성">
     </form>
 </body>

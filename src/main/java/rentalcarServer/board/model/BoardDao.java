@@ -132,4 +132,23 @@ public class BoardDao {
 		return false;
 	}
 
+	public void updateBoard(BoardRequestDto board) {
+		conn = DBManager.getConnection();
+		String sql = "UPDATE board SET title = ? , content = ? WHERE board_code = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2, board.getContent());
+			pstmt.setInt(3, board.getBoardCode());
+			
+			pstmt.execute();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
 }

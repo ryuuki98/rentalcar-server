@@ -113,6 +113,15 @@
 		<servlet-name>moveUpdateFormAction</servlet-name>
 		<url-pattern>/moveUpdateFormAction</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateBoardAction</servlet-name>
+		<servlet-class>rentalcarServer.board.controller.UpdateBoardAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateBoardAction</servlet-name>
+		<url-pattern>/updateBoardAction</url-pattern>
+	</servlet-mapping>
 
 
 

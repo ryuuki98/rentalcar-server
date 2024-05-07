@@ -7,9 +7,7 @@
 </head>
 <c:import url="/header"/>
 <script src="/resources/script/validation-login.js"></script>
-<body>
-
-	
+<body>	
 	<section id="root">
 		<h2>로그인</h2>
 		<form method="POST" action="/loginFormAction">
@@ -21,6 +19,7 @@
 				<p class="error-msg" id="error-msg-id">* 아이디: 필수 정보입니다.</p>
 				<p class="error-msg" id="error-msg-password">* 비밀번호: 필수 정보입니다.</p>
 			</div>
+			<button id="join-btn" onclick="location.href = '/join'">회원가입</button>
 			
 			<input type="submit" value="로그인">
 		</form>
