@@ -27,7 +27,7 @@
 		for(BoardResponseDto board : list) {
 		%>
 		<tr>
-			<td><%=board.getBoardCode()%></td>
+			<td><%=board.isAdmin() ? "공지" : board.getBoardCode()%></td>
 			<td><%=board.getUserId()%></td>
 			<td>
 				<a href="/detail?boardCode=<%=board.getBoardCode()%>">

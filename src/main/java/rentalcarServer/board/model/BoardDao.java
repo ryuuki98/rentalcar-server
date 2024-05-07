@@ -29,7 +29,7 @@ public class BoardDao {
 	public List<BoardResponseDto> findBoardAll(){
 		List<BoardResponseDto> list = new ArrayList<BoardResponseDto>();
 		conn = DBManager.getConnection();
-		String sql = "SELECT board_code,user_id,title,content,admin,reg_date FROM board order by reg_date desc;";
+		String sql = "SELECT board_code,user_id,title,content,admin,reg_date FROM board order by admin desc , reg_date desc;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
@@ -128,6 +128,8 @@ public class BoardDao {
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
 		}
 		return false;
 	}
@@ -147,6 +149,8 @@ public class BoardDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt);
 		}
 		
 	}
