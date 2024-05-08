@@ -14,8 +14,7 @@
 </head>
 <body>
 	<header>
-		<div class="logo" onclick="location.href ='/index.jsp'">렌트다 렌트
-			엌ㅋㅋ</div>
+		<div class="logo" onclick="location.href ='/index.jsp'">렌트다 렌트</div>
 		<nav>
 			<a href="/car-rental">차량대여</a> 
 			<a href="/boardAction">게시판</a>

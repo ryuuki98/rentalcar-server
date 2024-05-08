@@ -1,0 +1,96 @@
+/* 차량 목록 */
+body{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+#car-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-6.col-lg-4 {
+    width: calc(33.33% - 1rem);
+}
+
+.listing {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.listing-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.listing-img img {
+    width: 100%;
+    height: auto;
+}
+
+.listing-contents {
+    padding: 1rem;
+}
+
+.listing-contents h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.rent-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.listing-feature {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.listing-feature span.caption {
+    font-weight: bold;
+}
+
+.listing-feature span.number {
+    font-weight: normal;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #bbd6ff;
+}
+
+input[type="datetime-local"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+button {
+	height: 30px;
+	width: 50px;
+	padding : auto;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
