@@ -49,7 +49,7 @@ public class UpdateBoardAction extends HttpServlet {
 		board.setContent(content);
 		
 		boardDao.updateBoard(board);
-		response.sendRedirect("/boardAction");
+		response.sendRedirect("/detail?boardCode=" + boardCode);
 	}
 
 }

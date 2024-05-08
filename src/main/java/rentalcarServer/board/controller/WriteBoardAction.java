@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import rentalcarServer.board.model.BoardDao;
 import rentalcarServer.board.model.BoardRequestDto;
+import rentalcarServer.board.model.BoardResponseDto;
 import rentalcarServer.user.model.UserResponseDto;
 
 /**
@@ -39,7 +40,6 @@ public class WriteBoardAction extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
 		BoardDao boardDao = BoardDao.getInstance();
 		
 		HttpSession session = request.getSession();
@@ -48,14 +48,30 @@ public class WriteBoardAction extends HttpServlet {
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		
-		BoardRequestDto board = new BoardRequestDto();
+		boolean isValid = true;
+
+		if (userId == null || userId.equals(""))
+			isValid = false;
+		else if (title == null || title.equals(""))
+			isValid = false;
+		else if (content == null || content.equals(""))
+			isValid = false;
 		
-		board.setUserId(userId);
-		board.setTitle(title);
-		board.setContent(content);
+		if(isValid) {
+			BoardRequestDto board = new BoardRequestDto();
+			
+			board.setUserId(userId);
+			board.setTitle(title);
+			board.setContent(content);
+			
+			BoardResponseDto boardResponseDto = boardDao.createBoard(board);
+			response.sendRedirect("/detail?boardCode=" + boardResponseDto.getBoardCode());
+		}else {
+			System.out.println("글이 없거나 제목이 없거나 ");			
+			response.sendRedirect("/boardAction");
+		}
 		
-		boardDao.createBoard(board);
-		response.sendRedirect("/boardAction");
+	
 	}
 
 }
