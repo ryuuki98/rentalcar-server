@@ -72,10 +72,9 @@ public class BoardDao {
 
 	        pstmt.executeUpdate();
 
-	        ResultSet rs = pstmt.getGeneratedKeys();
+	        rs = pstmt.getGeneratedKeys();
 	        if (rs.next()) {
 	            int boardId = rs.getInt(1);
-	            System.out.println(boardId);
 	           board = findBoard(boardId);
 	        }
 	    } catch (SQLException e) {

@@ -122,6 +122,15 @@
 		<servlet-name>updateBoardAction</servlet-name>
 		<url-pattern>/updateBoardAction</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>searchCarsAction</servlet-name>
+		<servlet-class>rentalcarServer.cars.controller.SearchCarsAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchCarsAction</servlet-name>
+		<url-pattern>/searchCarsAction</url-pattern>
+	</servlet-mapping>
 
 
 
