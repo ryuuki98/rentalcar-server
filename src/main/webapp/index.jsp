@@ -34,7 +34,7 @@
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="listing d-block align-items-stretch">
                 <div class="listing-img h-100 mr-4">
-                    <img src="<%= car.getImageUrl() %>" alt="차량 이미지" class="img-fluid">
+                    <img src="<%= car.getImageUrl() %>" class="img-fluid">
                 </div>
                 <div class="listing-contents h-100">
                     <h3><%= car.getCarName() %></h3>

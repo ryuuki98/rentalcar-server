@@ -8,10 +8,12 @@ body{
 #car-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .col-md-6.col-lg-4 {
-    width: calc(33.33% - 1rem);
+    width: calc(28% - 1rem);
+    margin: 10px;
 }
 
 .listing {
@@ -19,6 +21,7 @@ body{
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+    border-radius: 20px;
 }
 
 .listing-img {
