@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="rentalcarServer.board.model.BoardResponseDto"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -22,22 +23,17 @@
 			<th>작성자</th>
 			<th>제목</th>
 		</tr>
-		<%
-		List<BoardResponseDto> list = (List)session.getAttribute("list");
-		for(BoardResponseDto board : list) {
-		%>
+		<c:forEach var="board" items="${list}">
 		<tr>
-			<td><%=board.isAdmin() ? "공지" : board.getBoardCode()%></td>
-			<td><%=board.getUserId()%></td>
+			<td><c:if test="${board.admin}">공지</c:if><c:if test="${!board.admin}">${board.boardCode}</c:if></td>
+			<td>${board.userId}</td>
 			<td>
-				<a href="/detail?boardCode=<%=board.getBoardCode()%>">
-					<%=board.getTitle()%>
+				<a href="/detail?boardCode=${board.boardCode}">
+					${board.title}
 				</a>
 			</td>
 		</tr>
-		<%
-		}
-		%>
+		</c:forEach>
 	</table>
 </body>
 <jsp:include page="/footer"></jsp:include>
