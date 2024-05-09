@@ -3,6 +3,7 @@ package rentalcarServer.cars.controller;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import rentalcarServer.cars.model.CarsDao;
 import rentalcarServer.cars.model.CarsResponseDto;
@@ -51,9 +53,9 @@ public class SearchCarsAction extends HttpServlet {
 		List<CarsResponseDto> list = new ArrayList<CarsResponseDto>();
 		list = carsDao.findAvailableCars(startDateTime, endDateTime);
 		
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
+		HttpSession session = request.getSession();
+		session.setAttribute("carList", list);
+		response.sendRedirect("/searchResultCars");
 
 	}
 
