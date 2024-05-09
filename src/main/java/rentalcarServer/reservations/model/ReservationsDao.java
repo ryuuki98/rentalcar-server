@@ -80,6 +80,40 @@ public class ReservationsDao {
 		}
 		return reservationsResponseDto;
 	}
+
+	 public boolean checkAvailability(String startDateTime, String endDateTime, String carCode) {
+	       conn = DBManager.getConnection();
+	       int count = 0;
+	        try {
+	            String sql = "SELECT COUNT(*) FROM reservations " +
+	                           "WHERE car_code = ? AND " +
+	                           "((borrow_date <= ? AND return_date >= ?) OR " +
+	                           "(borrow_date BETWEEN ? AND ?) OR " +
+	                           "(return_date BETWEEN ? AND ?))AND status = '예약중'";
+	            pstmt = conn.prepareStatement(sql);
+	            pstmt.setString(1, carCode);
+	            pstmt.setString(2, startDateTime);
+	            pstmt.setString(3, endDateTime);
+	            pstmt.setString(4, startDateTime);
+	            pstmt.setString(5, endDateTime);
+	            pstmt.setString(6, startDateTime);
+	            pstmt.setString(7, endDateTime);
+	            rs = pstmt.executeQuery();
+	            if (rs.next()) {
+	                count = Integer.parseInt(rs.getString(1));
+	                System.out.println("count : " + count);
+	            }else {
+					return true;
+				}
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	            return false;
+	        } finally {
+	          DBManager.close(conn, pstmt, rs);
+	        }
+	        
+            return count == 0;
+	    }
 	
 	
 }
