@@ -10,8 +10,9 @@ public class ReservationsResponseDto {
 	private Timestamp borrowDate;
 	private Timestamp returnDate;
 	private String status;
+	private String carName;
 	public ReservationsResponseDto(int reservationNum, String userId, int carCode, int carPrice, Timestamp borrowDate,
-			Timestamp returnDate, String status) {
+			Timestamp returnDate, String status, String carName) {
 		super();
 		this.reservationNum = reservationNum;
 		this.userId = userId;
@@ -20,6 +21,8 @@ public class ReservationsResponseDto {
 		this.borrowDate = borrowDate;
 		this.returnDate = returnDate;
 		this.status = status;
+		this.carName = carName;
+		
 	}
 	public int getReservationNum() {
 		return reservationNum;
@@ -62,6 +65,13 @@ public class ReservationsResponseDto {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public String getCarName() {
+		return carName;
+	}
+	public void setCarName(String carName) {
+		this.carName = carName;
 	}
 	
 	

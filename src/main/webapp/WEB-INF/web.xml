@@ -150,6 +150,17 @@
 		<servlet-name>checkReservation</servlet-name>
 		<url-pattern>/checkReservation</url-pattern>
 	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>checkReservationForUpdate</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.CheckReservationForUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkReservationForUpdate</servlet-name>
+		<url-pattern>/checkReservationForUpdate</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>moveReservationFormAction</servlet-name>
@@ -158,6 +169,60 @@
 	<servlet-mapping>
 		<servlet-name>moveReservationFormAction</servlet-name>
 		<url-pattern>/moveReservationFormAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.ReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reservationAction</servlet-name>
+		<url-pattern>/reservationAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myReservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.MyReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myReservationAction</servlet-name>
+		<url-pattern>/myReservationAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reservationDetailAction</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.ReservationDetailAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reservationDetailAction</servlet-name>
+		<url-pattern>/reservationDetailAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>deleteReservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.DeleteReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteReservationAction</servlet-name>
+		<url-pattern>/deleteReservationAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>moveUpdateReservationForm</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.MoveUpdateReservationForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moveUpdateReservationForm</servlet-name>
+		<url-pattern>/moveUpdateReservationForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateReservationAction</servlet-name>
+		<servlet-class>rentalcarServer.reservations.controller.UpdateReservationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateReservationAction</servlet-name>
+		<url-pattern>/updateReservationAction</url-pattern>
 	</servlet-mapping>
 
 
@@ -305,6 +370,42 @@
 	<servlet-mapping>
 		<servlet-name>reservationForm</servlet-name>
 		<url-pattern>/reservationForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reservationResult</servlet-name>
+		<jsp-file>/views/reservations/reservationResult.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reservationResult</servlet-name>
+		<url-pattern>/reservationResult</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myReservation</servlet-name>
+		<jsp-file>/views/reservations/myReservation.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myReservation</servlet-name>
+		<url-pattern>/myReservation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reservationDetail</servlet-name>
+		<jsp-file>/views/reservations/reservationDetail.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reservationDetail</servlet-name>
+		<url-pattern>/reservationDetail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateReservationForm</servlet-name>
+		<jsp-file>/views/reservations/updateReservationForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateReservationForm</servlet-name>
+		<url-pattern>/updateReservationForm</url-pattern>
 	</servlet-mapping>
 
 

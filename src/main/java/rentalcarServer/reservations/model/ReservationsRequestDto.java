@@ -10,13 +10,14 @@ public class ReservationsRequestDto {
 	private Timestamp borrowDate;
 	private Timestamp returnDate;
 	private String status;
+	private String carName;
 	
 	public ReservationsRequestDto() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	public ReservationsRequestDto(int reservationNum, String userId, int carCode, int carPrice, Timestamp borrowDate,
-			Timestamp returnDate, String status) {
+			Timestamp returnDate, String status, String carName) {
 		super();
 		this.reservationNum = reservationNum;
 		this.userId = userId;
@@ -25,6 +26,7 @@ public class ReservationsRequestDto {
 		this.borrowDate = borrowDate;
 		this.returnDate = returnDate;
 		this.status = status;
+		this.carName = carName;
 	}
 
 	public int getReservationNum() {
@@ -81,6 +83,13 @@ public class ReservationsRequestDto {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public String getCarName() {
+		return carName;
+	}
+	public void setCarName(String carName) {
+		this.carName = carName;
 	}
 	
 	
