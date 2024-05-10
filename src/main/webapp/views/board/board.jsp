@@ -14,7 +14,9 @@
 <body>
 	<div class="page-header">
 		<h1 style="float: left; margin: 0;">게시판 페이지</h1>
+		<c:if test="${not empty user }">
 		<a href="/writeBoard" class="btn-write" style="float: right;">글쓰기</a>
+		</c:if>
 	</div>
 	
 	<table border="1">
