@@ -16,6 +16,12 @@ $(document).ready(() => {
         var startDateTime = $('#start-datetime').val();
         var endDateTime = $('#end-datetime').val();
         var carCode = $('#carCode').val();
+        var reservationNum = $('#reservationNum').val();
+        
+        console.log(startDateTime);
+        console.log(endDateTime);
+        console.log(carCode);
+        console.log(reservationNum);
 
         if (!startDateTime || !endDateTime) {
             alert("대여일과 반납일을 모두 선택하세요.");
@@ -23,12 +29,13 @@ $(document).ready(() => {
         }
 
         $.ajax({
-            url: '/checkReservation', 
+            url: '/checkReservationForUpdate', 
             method: 'POST', 
             data: { 
                 startDateTime: startDateTime,
                 endDateTime: endDateTime,
                 carCode: carCode,
+                reservationNum : reservationNum
             },
             success: function(response) {
                 console.log(response);

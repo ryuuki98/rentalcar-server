@@ -18,6 +18,7 @@
 		<br>
 		<button onclick="location.href = '/updateForm'">정보 변경</button>
 		<button onclick="location.href='/deleteForm'">유저 탈퇴</button>
+		<button onclick="location.href='/myReservationAction'">내 예약정보 확인</button>
 	</section>
 </body>
 <jsp:include page="/footer"></jsp:include>

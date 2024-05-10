@@ -43,6 +43,9 @@
 				<c:when test="${not empty user }">
 					<input type='submit' value="예약하기">
 				</c:when>
+				<c:otherwise>
+				<p>예약기능은 로그인 후 이용하실 수 있습니다. </p>
+				</c:otherwise>
 
 			</c:choose>
 		</form>

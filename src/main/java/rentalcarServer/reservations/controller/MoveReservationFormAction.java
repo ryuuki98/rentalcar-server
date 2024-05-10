@@ -48,17 +48,28 @@ public class MoveReservationFormAction extends HttpServlet {
 		String borrowDateString = request.getParameter("start-datetime");
 		String returnDateString = request.getParameter("end-datetime");
 
-		// borrowDateString과 returnDateString를 Timestamp로 변환
 		Timestamp borrowDate = Timestamp.valueOf(borrowDateString.replace("T", " ") + ":00");
 		Timestamp returnDate = Timestamp.valueOf(returnDateString.replace("T", " ") + ":00");
+
+		long timeLong = ((returnDate.getTime() - borrowDate.getTime()) / (1000 * 60 * 60 ));
+		int time = (int) timeLong;
 		
-		
+
 		UserResponseDto user = (UserResponseDto) session.getAttribute("user");
-		System.out.println(user.getUserName());
 		CarsResponseDto car = (CarsResponseDto) session.getAttribute("car");
-		System.out.println(car.getCarCode());
 		
+		int price = time * car.getCarPrice();
+
 		ReservationsRequestDto reservationsRequestDto = new ReservationsRequestDto();
+		reservationsRequestDto.setUserId(user.getUserId());
+		reservationsRequestDto.setCarCode(car.getCarCode());
+		reservationsRequestDto.setCarPrice(price);
+		reservationsRequestDto.setBorrowDate(borrowDate);
+		reservationsRequestDto.setReturnDate(returnDate);
+		reservationsRequestDto.setCarName(car.getCarBrand() + " "+car.getCarName());		
+		session.setAttribute("reservation", reservationsRequestDto);
+		response.sendRedirect("/reservationForm");
+
 	}
 
 }
